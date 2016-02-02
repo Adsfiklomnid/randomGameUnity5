@@ -6,7 +6,9 @@ public class testing2dMech : MonoBehaviour {
 	public Transform rightPoint;
 	public bool onGround;
 	public GameObject sprite;
-
+	
+	public bool spiritOn = false;
+	
 	public static int playerHealth;
 
 	public GameObject cameraTwoD;
@@ -14,6 +16,11 @@ public class testing2dMech : MonoBehaviour {
 	bool movingLeft = false;
 	bool movingRight = false;
 	
+	/*
+		2.5d controller; Left,Right,Jump
+		Mouse block grower?
+		Bridge
+	*/
 	//animations:
 	
 	//public Animation walk;
@@ -33,30 +40,30 @@ public class testing2dMech : MonoBehaviour {
 				}
 			}
 			
-			if(Input.GetKeyDown ("a")){
-				movingLeft = true;
-			}
-			if(Input.GetKeyDown ("d")){
-				movingRight = true;
-			}
-			if(Input.GetKeyUp ("a")){
-				movingLeft = false;
-			}
-			if(Input.GetKeyUp ("d")){
-				movingRight = false;
-			}
+		if(Input.GetKeyDown ("a")){
+			movingLeft = true;
+		}
+		if(Input.GetKeyDown ("d")){
+			movingRight = true;
+		}
+		if(Input.GetKeyUp ("a")){
+			movingLeft = false;
+		}
+		if(Input.GetKeyUp ("d")){
+			movingRight = false;
+		}
 		if(movingLeft){
 			moveLeft();
 		}
 		if(movingRight){
 			moveRight();
 		}
-			if (Input.GetKeyDown ("space")){
-				if(onGround){
-					sprite.GetComponent<Rigidbody>().AddForce(Vector2.up * 500);
-					onGround = false;
-				}
+		if(Input.GetKeyDown ("space")){
+			if(onGround){
+				sprite.GetComponent<Rigidbody>().AddForce(Vector2.up * 500);
+				onGround = false;
 			}
+		}
 		
 			/*if(Input.GetKeyDown ("a")){
 			print("a");
