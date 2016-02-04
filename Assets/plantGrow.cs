@@ -14,20 +14,28 @@ public class plantGrow : MonoBehaviour {
 	int plantType;
 	float timeStart;
 	float timeFinish;
-	
+	public GameObject playerCamera;
 	void Start(){
+	
 		
 	}
 	void Update(){
-		
-		
+
+	
 	}
 	
+	void OnMouseOver(){
+		if(Input.GetMouseButtonDown(0)){
+		      if(gameObject.tag == "shroom"){
+					print(gameObject.name);
+				}			  
+		}
+	 }
+
 	 void GrowPlanr(){
 		 
 		 
 	 }
-	 
-	 
+ 
 }
 	

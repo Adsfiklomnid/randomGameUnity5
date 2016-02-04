@@ -89,7 +89,7 @@ public class testing2dMech : MonoBehaviour {
 	}
 	void moveRight(){
 		sprite.GetComponent<Rigidbody>().AddForce(Vector2.right * 30);
-		GetComponent<Animation>().CrossFade ("metarig|Run");
+		//GetComponent<Animation>().CrossFade ("metarig|Run");
 		transform.LookAt(rightPoint);
 	}
 }
