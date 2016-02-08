@@ -27,16 +27,28 @@ public class plantGrow : MonoBehaviour {
 	void OnMouseOver(){
 		if(Input.GetMouseButtonDown(0)){
 			//Start counting how long.
-		      if(gameObject.tag == "growShroom"){
+		    if(gameObject.tag == "growShroom"){
 					print(gameObject.name);
-				}else if(gameObject.tag == "bridgeShroom"){
+			}else if(gameObject.tag == "bridgeShroom"){
 					
-				}else if(gameObject.tag == "bridgeShroom"){
-					
-				}					
+			}				
 		}if(Input.GetMouseButtonUp(0)){
 			//Stop animations & transitions
 			// Stop counter
+		}
+		
+		if(Input.GetMouseButtonDown(1)){
+			//Start counter
+			//Start animation
+			if(gameObject.tag == "growShroom"){
+				print(gameObject.name);
+			}else if(gameObject.tag == "bridgeShroom"){
+					
+			}	
+		}
+		if(Input.GetMouseButtonUp(1)){
+			//Stop counter
+			//stop animation
 		}
 	 }
 
